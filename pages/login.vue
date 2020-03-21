@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-center">
         <form class="w-full md:w-2/5 my-10" @submit.prevent="submit">
-            <Logo width="240" class="mx-auto mb-10" />
+            <img src="/images/logo.png" width="240" class="mx-auto mb-10" />
 
             <div class="form__row">
                 <input v-model="form.email" type="email" placeholder="Email address"  autofocus />
