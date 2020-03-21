@@ -1,0 +1,31 @@
+input,
+select,
+textarea,
+.input {
+ @apply bg-white p-4 rounded text-lg;
+ border: 1px solid theme('colors.grey.400');
+ width: 100%;
+ outline: none;
+ transition: border-color 100ms ease;
+
+ &:focus {
+   border-color: theme('colors.green.500');
+ }
+
+ &:disabled {
+   @apply bg-grey-200;
+ }
+
+ &--slim {
+   @apply px-4 py-2 text-base;
+ }
+}
+
+select {
+ height: 60px;
+}
+
+label {
+ @apply text-sm my-1;
+ display: block;
+}

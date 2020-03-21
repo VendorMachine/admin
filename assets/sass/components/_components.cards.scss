@@ -1,0 +1,26 @@
+.card {
+  @apply bg-white shadow-lg rounded-lg;
+
+  &--auth {
+    max-width: 450px;
+    width: 100%;
+  }
+
+  &__body {
+    @apply p-8;
+  }
+
+  &__banner {
+    @apply py-2 rounded-t font-bold text-sm;
+    text-align: center;
+    text-transform: capitalize;
+  }
+}
+
+.status-banner-pending {
+  @apply bg-orange-500 text-white;
+}
+
+.status-banner-suspended {
+  @apply bg-red-500 text-white;
+}
