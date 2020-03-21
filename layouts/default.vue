@@ -5,7 +5,7 @@
     <div>
       <span v-click-outside="hideUserMenu" @click="showUserMenu = !showUserMenu" class="font-semibold relative cursor-pointer select-none">{{ user.name }}</span>
       <div v-if="showUserMenu" class="mt-2 py-2 w-48 bg-white border border-grey-300 rounded-lg shadow-xl absolute mt-2 right-0 mr-2">
-        <span @click="logout()" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500">Sign out</span>
+        <span @click="logout()" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 cursor-pointer">Sign out</span>
       </div>
     </div>
   </header>
