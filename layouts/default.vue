@@ -15,8 +15,8 @@
     </div>
     <div class="dashboard__sidenav-content">
       <ul>
-        <li class="dashboard__sidenav-menu-item dashboard__sidenav-menu-item--selected"><i class="fa fa-store dashboard__sidenav-menu-item-icon"></i> Vendors</li>
-        <li class="dashboard__sidenav-menu-item"><i class="fa fa-tools dashboard__sidenav-menu-item-icon"></i> Settings</li>
+        <nuxt-link to="/vendors"><li :class="{'dashboard__sidenav-menu-item--active': isActive('vendors')}" class="dashboard__sidenav-menu-item"><i class="fa fa-store dashboard__sidenav-menu-item-icon"></i>Vendors</li></nuxt-link>
+        <nuxt-link to="/settings"><li :class="{'dashboard__sidenav-menu-item--active': isActive('settings')}" class="dashboard__sidenav-menu-item"><i class="fa fa-tools dashboard__sidenav-menu-item-icon"></i>Settings</li></nuxt-link>
       </ul>
     </div>
   </aside>
@@ -76,6 +76,10 @@
           this.$router.push('/login')
         })
       },
+
+      isActive(name) {
+        return this.$route.name === name
+      }
     },
   }
 </script>

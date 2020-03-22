@@ -28,10 +28,10 @@
     }
 
     &__sidenav-menu-item {
-        @apply p-2 cursor-pointer
+        @apply p-2 cursor-pointer rounded
     }
 
-    &__sidenav-menu-item--selected {
+    &__sidenav-menu-item--active {
         background-color: theme('colors.grey.200');
     }
 
