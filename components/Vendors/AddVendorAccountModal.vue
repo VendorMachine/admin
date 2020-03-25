@@ -1,7 +1,6 @@
 <template>
   <modal :name="modal" width="600" height="auto" :click-to-close="true" :scrollable="true" :adaptive="true">
     <div class="modal">
-      <h1 class="">Start your selling jouney</h1>
       <h2 class="mt-6">Lets give it a name</h2>
 
       <form class="w-full" method="POST" @submit.prevent="submit">
@@ -9,12 +8,6 @@
           <label>Name</label>
           <input type="text" v-model="form.name" required />
           <Validation :errors="errors" name="name"></Validation>
-        </div>
-
-        <div class="form__row">
-          <label>Tag line</label>
-          <textarea type="text" v-model="form.tagline" required></textarea>
-          <Validation :errors="errors" name="description"></Validation>
         </div>
 
         <button class="btn btn--primary">

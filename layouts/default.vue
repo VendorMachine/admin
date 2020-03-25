@@ -30,12 +30,11 @@
 
 <script>
   import Sidebar from '@/components/Page/Sidebar';
-  import AddVendorModal from '@/components/Modals/AddVendorAccount';
   import ClickOutside from 'vue-click-outside'
   import { mapActions, mapGetters } from 'vuex';
 
   export default {
-    components: { AddVendorModal, Sidebar },
+    components: { Sidebar },
 
     data(){
       return {
