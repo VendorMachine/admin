@@ -45,11 +45,13 @@
         this.busy = true;
         this.store(this.form)
           .then((response) => {
+            console.log(response);
+            
             this.$modal.hide(this.modal);
-            this.$router.push(`/dashboard`)
+            this.$router.push(`/vendors/${response.id}/edit`)
           })
           .catch(error => {
-            if (error.response.data.errors) {
+            if (error.response && error.response.data.errors) {
               this.errors = error.response.data.errors;
             }
           })

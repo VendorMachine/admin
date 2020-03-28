@@ -42,6 +42,7 @@
     &__main {
         grid-area: main;
         background-color: #f4f5f7;
+        overflow: scroll;
     }
     
     &__main-content {

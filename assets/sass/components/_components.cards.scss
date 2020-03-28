@@ -15,7 +15,14 @@
     text-align: center;
     text-transform: capitalize;
   }
+
+  &__status {
+    @apply border-b border-2 block mb-1;
+    max-width: 2em;
+  }
 }
+
+
 
 .status-banner-pending {
   @apply bg-orange-500 text-white;

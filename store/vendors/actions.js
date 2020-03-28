@@ -1,24 +1,23 @@
 export default {
 
-  async boot({dispatch, state}) {
-    console.log('vendor boot');
-    await dispatch('index');
+  async boot({ dispatch, state }) {
+    await dispatch('index')
     await dispatch('setActive', state.list[0].id)
-    
   },
 
-  async index({commit}, payload) {
-    return await this.$api.vendors.index()
+  index({ commit }, payload) {
+    return this.$api.vendors.index(payload)
       .then(response => {
         commit('setVendors', response.data);
-        return response;
+        commit('setVendorsMeta', response.meta);
+        return response
       })
   },
 
 
-  async productsIndex({commit, state}, payload) {
+  async productsIndex({ commit, state }, payload) {
     console.log(state);
-    
+
     return await this.$api.vendors.products.index(state.active)
       .then(response => {
         commit('setProducts', response.data);
@@ -26,14 +25,14 @@ export default {
       })
   },
 
-  async storeProduct({commit, state}, payload) {
+  async storeProduct({ commit, state }, payload) {
     return await this.$api.vendors.products.store(state.active, payload)
       .then(response => {
         return response;
       })
   },
 
-  async store({commit}, payload) {
+  async store({ commit }, payload) {
     return await this.$api.vendors.store(payload)
       .then(response => {
         return response;

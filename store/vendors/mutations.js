@@ -6,6 +6,10 @@ export default {
         Vue.set(state, 'list', vendors);
     },
 
+    setVendorsMeta(state, meta) {
+        Vue.set(state, 'meta', meta);
+    },
+
     setProducts(state, products) {
         const index = _.findIndex(state.list, { id: products[0].vendor_id });
         Vue.set(state.list[index],'products', products);
