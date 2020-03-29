@@ -16,6 +16,7 @@
             <SubmitButton class="w-full" :busy="busy" label="Login"></SubmitButton>
 
             <div class="mt-2 mb-5 text-center">
+                <nuxt-link to="/register" class="text-sm no-underline text-teal-500 block">Register</nuxt-link>
                 <nuxt-link to="/password/email" class="text-sm no-underline text-teal-500">Forgotten password?</nuxt-link>
             </div>
         </form>

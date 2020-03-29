@@ -9,6 +9,10 @@ export default $axios => ({
     },
   },
 
+  register(payload) {
+    return $axios.$post(`/register`, payload)
+  },
+
   verify: {
     post (payload) {
       return $axios.$post(`/verify`, payload)

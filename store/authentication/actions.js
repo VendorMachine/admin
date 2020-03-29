@@ -15,6 +15,17 @@ export default {
             })
     },
 
+    async register({commit}, payload) {
+        return await this.$api.auth.register(payload)
+            .then(async() => {
+                return await this.$auth.loginWith('local', {data: payload})
+                .then(() => {
+                    this.$toast.show('Registration Successful');
+                    this.$router.push('/verify-email');
+                }); 
+            });
+    },
+
     async verifyEmail({ commit }, payload) {
         return await this.$api.auth.verify.post(payload);
     },
