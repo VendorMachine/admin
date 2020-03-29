@@ -14,6 +14,10 @@ export default {
       })
   },
 
+  get({ commit }, id) {
+    return this.$api.vendors.show(id)
+  },
+
 
   async productsIndex({ commit, state }, payload) {
     console.log(state);

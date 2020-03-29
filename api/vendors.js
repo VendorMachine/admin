@@ -19,19 +19,11 @@ export default $axios => ({
         store (id, payload) {
             return $axios.$post(`/vendors/${id}/products`, payload)
         },
-    }
+    },
 
-    // show (id, query) {
-    //     return $axios.$get(`/modules/${id}`, query)
-    // },
-
-    // update (id, payload) {
-    //     return $axios.$put(`/modules/${id}`, payload)
-    // },
-
-    // delete (id) {
-    //     return $axios.$delete(`/modules/${id}`);
-    // },
+    show (id) {
+        return $axios.$get(`/vendors/${id}`)
+    },
 
 
 })
