@@ -10,6 +10,10 @@ export default $axios => ({
         return $axios.$post('/vendors', payload)
     },
 
+    update (payload) {
+        return $axios.$put(`/vendors/${payload.id}`, payload)
+    },
+
     products: {
         index (id, query) {
             let queryString = qs.stringify(query);

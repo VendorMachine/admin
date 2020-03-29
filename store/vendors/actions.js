@@ -47,35 +47,21 @@ export default {
     commit('setActive', payload)
   },
 
-  // async show({commit}, payload) {
-  //   return await this.$api.modules.show(payload);
-  // },
 
-  // async update({commit}, payload) {
-  //   return await this.$api.modules.update(payload.id, payload.module)
-  //     .then(response => {
-  //       this.$toast.success('Module updated');
-  //       return response;
-  //     })
-  // },
+  async update({commit}, payload) {
+    return await this.$api.vendors.update(payload)
+      .then(response => {
+        commit('updateVendor', response)
+        this.$toast.success('Vendor updated');
+        return response;
+      })
+  },
 
-  // async delete({commit}, payload) {
-  //   return await this.$api.modules.delete(payload)
-  //     .then(response => {
-  //       this.$toast.success('Module deleted');
-  //       return response;
-  //     })
-  // },
-
-  // async storeCover({commit}, payload) {
-  //   return await this.$api.modules.cover.store(payload.id, payload.data)
-  // },
-
-  // async deleteCover({commit}, payload) {
-  //   return await this.$api.modules.cover.delete(payload)
-  //     .then(response => {
-  //       this.$toast.success('Cover removed');
-  //       return response;
-  //     })
-  // },
+  async delete({commit}, payload) {
+    return await this.$api.vendors.delete(payload)
+      .then(response => {
+        this.$toast.success('Vendor deleted');
+        return response;
+      })
+  },
 }
