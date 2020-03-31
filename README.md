@@ -8,6 +8,7 @@ A free and opensource multi vendor Marketplace
 
 `API CircleCI` ![API Build Status](https://circleci.com/gh/squareborg/vendormachine-api.png?circle-token=:circle-token)
 
+API Repo: https://github.com/squareborg/vendormachine-api  
 OpenAPI Documentation: https://vendormachine-api.herokuapp.com/api/documentation
 
 Frontend Demo: https://vendormachine-frontend.herokuapp.com  
