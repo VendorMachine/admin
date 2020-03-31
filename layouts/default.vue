@@ -3,7 +3,7 @@
   <header class="dashboard__header border-b border-grey-200 flex flex-row  px-6 items-center">
     <i class="far fa-bell mr-4 text-xl  ml-auto"></i>
     <div>
-      <span v-click-outside="hideUserMenu" @click="showUserMenu = !showUserMenu" class="font-semibold relative cursor-pointer select-none">{{ user.name }}</span>
+      <span v-click-outside="hideUserMenu" @click="showUserMenu = !showUserMenu" class="font-semibold relative cursor-pointer select-none">{{ user.name || 'User' }}</span>
       <div v-if="showUserMenu" class="mt-2 py-2 w-48 bg-white border border-grey-300 rounded-lg shadow-xl absolute mt-2 right-0 mr-2">
         <span @click="logout()" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 cursor-pointer">Sign out</span>
       </div>
@@ -15,7 +15,7 @@
     </div>
     <div class="dashboard__sidenav-content">
       <ul>
-        <nuxt-link to="/vendors"><li :class="{'dashboard__sidenav-menu-item--active': isActive('vendors')}" class="dashboard__sidenav-menu-item"><i class="fa fa-store dashboard__sidenav-menu-item-icon"></i>Vendors</li></nuxt-link>
+        <nuxt-link v-if="$auth.user.is_admin" to="/vendors"><li :class="{'dashboard__sidenav-menu-item--active': isActive('vendors')}" class="dashboard__sidenav-menu-item"><i class="fa fa-store dashboard__sidenav-menu-item-icon"></i>Vendors</li></nuxt-link>
         <nuxt-link to="/settings"><li :class="{'dashboard__sidenav-menu-item--active': isActive('settings')}" class="dashboard__sidenav-menu-item"><i class="fa fa-tools dashboard__sidenav-menu-item-icon"></i>Settings</li></nuxt-link>
       </ul>
     </div>
