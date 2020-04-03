@@ -21,7 +21,7 @@ export default {
                 return await this.$auth.loginWith('local', {data: payload})
                 .then(() => {
                     this.$toast.show('Registration Successful');
-                    this.$router.push('/verify-email');
+                    this.$router.push({ path: '/email-verify', query:{ email: payload.email }});
                 }); 
             });
     },

@@ -12,6 +12,11 @@
     background: $gradPrimary;
   }
 
+  &--secondary {
+    color: theme('colors.black');
+    background: theme('colors.grey.200')
+  }
+
   &--outline {
     @apply border-grey-500 text-grey-500 border rounded px-3 py-1 text-sm mb-0;
     background-color: transparent;
