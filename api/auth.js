@@ -1,4 +1,9 @@
 export default $axios => ({
+
+  me() {
+    return $axios.get(`/me`);
+  },
+  
   password: {
     email(payload) {
       return $axios.$post(`/password/email`, payload)

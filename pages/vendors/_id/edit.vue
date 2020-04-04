@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <h1 v-if="vendor && vendor.name">{{ vendor.name }}</h1>
     <section v-if="freshVendor">
       <div class="flex">

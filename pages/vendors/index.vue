@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <h1>Vendors</h1>
     <div>
       <div class="flex">  
