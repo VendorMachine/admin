@@ -57,9 +57,7 @@ import VendorOnboarding from '@/components/Onboarding/VendorOnboarding'
         }, 300)
       },
 
-      submitClicked() {
-        console.log('clcick');
-        
+      submitClicked() {        
         if (this.busy) {return false}
         this.busy = true
         this.storeVendor(this.vendor)

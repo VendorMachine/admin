@@ -33,10 +33,18 @@
 
     &__sidenav-menu-item--active {
         background-color: theme('colors.grey.200');
+
+        i {
+            color: theme('colors.bluegem') !important;
+        }
     }
 
     &__sidenav-menu-item-icon {
         @apply text-black mr-2 text-grey-400
+    }
+
+    &__sidenav-menu-item-icon--active {
+        @apply text-black mr-2 text-bluegem-500
     }
 
     &__main {

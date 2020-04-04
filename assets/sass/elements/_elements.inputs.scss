@@ -3,7 +3,8 @@ select,
 textarea,
 .input {
  @apply bg-white p-4 rounded text-lg;
- border: 1px solid theme('colors.grey.400');
+ border-width: 0 0 2px;
+ border-color: theme('colors.grey.400');
  width: 100%;
  outline: none;
  transition: border-color 100ms ease;
