@@ -16,7 +16,15 @@
     <div class="dashboard__sidenav-content">
       <ul>
         <nuxt-link v-if="$auth.user.is_admin" to="/vendors"><li :class="{'dashboard__sidenav-menu-item--active': isActive('vendors')}" class="dashboard__sidenav-menu-item"><i class="fa fa-store dashboard__sidenav-menu-item-icon"></i>Vendors</li></nuxt-link>
-        <nuxt-link to="/settings"><li :class="{'dashboard__sidenav-menu-item--active': isActive('settings')}" class="dashboard__sidenav-menu-item"><i class="fa fa-tools dashboard__sidenav-menu-item-icon"></i>Settings</li></nuxt-link>
+        <span v-if="$auth.loggedIn">
+          <nuxt-link to="/">
+            <li :class="{'dashboard__sidenav-menu-item--active': isActive('index')}" class="dashboard__sidenav-menu-item">
+              <i :class="{'dashboard__sidenav-menu-item-icon--active': isActive('index')}" class="fa fa-chart-bar dashboard__sidenav-menu-item-icon"></i>Dashboard
+            </li>
+          </nuxt-link>
+          <nuxt-link to="/vendor/edit"><li :class="{'dashboard__sidenav-menu-item--active': isActive('vendor-edit')}" class="dashboard__sidenav-menu-item"><i :class="{'dashboard__sidenav-menu-item-icon--active': isActive('vendor-edit')}" class="fa fa-store dashboard__sidenav-menu-item-icon"></i>Shop Details</li></nuxt-link>
+          <nuxt-link to="/settings"><li :class="{'dashboard__sidenav-menu-item--active': isActive('settings')}" class="dashboard__sidenav-menu-item"><i :class="{'dashboard__sidenav-menu-item-icon--active': isActive('settings')}" class="fa fa-tools dashboard__sidenav-menu-item-icon"></i>Settings</li></nuxt-link>
+        </span>
       </ul>
     </div>
   </aside>
