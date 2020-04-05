@@ -16,8 +16,8 @@
     <div class="dashboard__sidenav-content">
       <ul>
         <div v-if="$auth.user.is_admin">
-          <nuxt-link to="/admin/vendors"><li :class="{'dashboard__sidenav-menu-item--active': isActive('vendors')}" class="dashboard__sidenav-menu-item"><i class="fa fa-store dashboard__sidenav-menu-item-icon"></i>Vendors</li></nuxt-link>
-          <nuxt-link to="/admin/settings"><li :class="{'dashboard__sidenav-menu-item--active': isActive('settings')}" class="dashboard__sidenav-menu-item"><i :class="{'dashboard__sidenav-menu-item-icon--active': isActive('settings')}" class="fa fa-tools dashboard__sidenav-menu-item-icon"></i>Settings</li></nuxt-link>
+          <nuxt-link to="/admin/vendors"><li :class="{'dashboard__sidenav-menu-item--active': isActive('admin-vendors')}" class="dashboard__sidenav-menu-item"><i :class="{'dashboard__sidenav-menu-item-icon--active': isActive('admin-vendors')}" class="fa fa-store dashboard__sidenav-menu-item-icon"></i>Vendors</li></nuxt-link>
+          <nuxt-link to="/admin/settings"><li :class="{'dashboard__sidenav-menu-item--active': isActive('admin-settings')}" class="dashboard__sidenav-menu-item"><i :class="{'dashboard__sidenav-menu-item-icon--active': isActive('admin-settings')}" class="fa fa-tools dashboard__sidenav-menu-item-icon"></i>Settings</li></nuxt-link>
         </div>
         <span v-if="$auth.loggedIn && ! $auth.user.is_admin">
           <nuxt-link to="/">
