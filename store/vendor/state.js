@@ -1,4 +1,6 @@
 export default () => ({
-    account: null,
+    account: {
+        name: ""
+    },
     products: [],
 })

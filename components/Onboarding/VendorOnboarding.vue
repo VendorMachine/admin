@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapActions, mapGetters, mapState } from 'vuex'
 
 export default {
     data() {
@@ -52,8 +52,21 @@ export default {
       }
     },
 
+    computed: {
+      
+      ...mapState({
+        vendorState: 'vendor/account'
+      }),
+      
+      hasVendorAccount() {
+        return this.$auth.user.is_vendor
+      }
+
+    },
+
     methods: {
       ...mapActions({
+        me: 'vendor/get',
         storeVendor: 'vendor/store'
       }),
 
@@ -75,8 +88,9 @@ export default {
         if (this.busy) {return false}
         this.busy = true
         this.storeVendor(this.vendor)
-        .then(() =>{
-          this.$toast('Saved')
+        .then(async() =>{
+          await this.$auth.fetchUser()
+          this.$toast.show('Saved')
         })
         .finally(()=>{
           this.busy = false

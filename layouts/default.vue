@@ -25,7 +25,10 @@
               <i :class="{'dashboard__sidenav-menu-item-icon--active': isActive('index')}" class="fa fa-chart-bar dashboard__sidenav-menu-item-icon"></i>Dashboard
             </li>
           </nuxt-link>
-          <nuxt-link to="/vendor/edit"><li :class="{'dashboard__sidenav-menu-item--active': isActive('vendor-edit')}" class="dashboard__sidenav-menu-item"><i :class="{'dashboard__sidenav-menu-item-icon--active': isActive('vendor-edit')}" class="fa fa-store dashboard__sidenav-menu-item-icon"></i>Shop Details</li></nuxt-link>
+          <div v-if="$auth.user.is_vendor">
+            <nuxt-link to="/vendor/edit"><li :class="{'dashboard__sidenav-menu-item--active': isActive('vendor-edit')}" class="dashboard__sidenav-menu-item"><i :class="{'dashboard__sidenav-menu-item-icon--active': isActive('vendor-edit')}" class="fa fa-store dashboard__sidenav-menu-item-icon"></i>Shop Details</li></nuxt-link>
+            
+          </div>
         </span>
       </ul>
     </div>

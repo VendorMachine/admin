@@ -32,16 +32,17 @@ import VendorOnboarding from '@/components/Onboarding/VendorOnboarding'
     },
 
     computed: {
-      ...mapGetters({
-        hasVendorAccount: 'vendor/hasVendorAccount'
-      }),
-
+      
       ...mapState({
         vendorState: 'vendor/account'
       }),
 
       vendor() {
         return this.$store.state.vendor.account
+      },
+      
+      hasVendorAccount() {
+        return this.$auth.user.is_vendor
       }
 
     },
