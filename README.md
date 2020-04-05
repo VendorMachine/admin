@@ -16,6 +16,9 @@ Frontend Demo: https://vendormachine-frontend.herokuapp.com
 username: `admin@vendormachine.test`  
 password: `password`  
 
+username: `user@vendormachine.test`  
+password: `password`  
+
 Roadmap
 -----------
 
