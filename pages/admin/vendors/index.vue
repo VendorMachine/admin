@@ -10,8 +10,8 @@
         <Pagination v-if="pagination.total_pages > 1" class="w-full mt-6 mx-auto" :page="pagination.current_page" :per-page="pagination.per_page" :records="pagination.total" @paginate="setPage"></Pagination>
       <section class="flex flex-wrap p-4 " v-if="!$fetchState.pending && !busyResults">
         <div :key="vendor.id" v-for="vendor in vendors" class="mt-2 w-1/2 p-1">
-          <nuxt-link class="" :to="`/vendors/${vendor.id}/edit`">
-            <div class="card p-4 no-underline">
+          <nuxt-link class="" :to="`/admin/vendors/${vendor.id}/edit`">
+            <div class="card no-underline">
               <div class="card__header">
                 <span class="card__status border-green-400"></span>
                 <h2 class="font-bold text-lg text-grey-600">{{ vendor.name }}</h2>

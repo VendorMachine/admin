@@ -20,6 +20,13 @@ import VendorOnboarding from '@/components/Onboarding/VendorOnboarding'
       return {
       }
     },
+
+    created() {
+      if(this.$auth.$state.user.is_admin) {
+        this.$router.push('/admin')
+      }
+    },
+
     async fetch() {
       await this.me()
     },

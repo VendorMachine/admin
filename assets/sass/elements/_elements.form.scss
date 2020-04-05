@@ -2,13 +2,6 @@ input,
 textarea,
 .input {
   @apply py-2 px-4 my-1 text-base rounded;
-  color: #000;
-  background-color: #212836;
-  border: 1px solid #394255;
   width: 100%;
   outline: none;
-
-  &:focus {
-    border-color: #717C93;
-  }
 }

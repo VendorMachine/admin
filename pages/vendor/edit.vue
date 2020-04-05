@@ -3,10 +3,15 @@
       <div class="flex">
         <button @click="save" class="ml-auto btn btn--primary">Save</button>
         </div>
-    <div class="card p-4 mt-2 lg:w-1/3">
-      <div class="">
-        <input type="text" v-model="vendor.name">
+    <div class="card p-12mt-2 lg:w-4/5">
+    <div class="card__header">
+      Shop details
+    </div>
+      <div class="card__body">
+        <div class="lg:w-1/2">
+          <input type="text" v-model="vendor.name">
 
+        </div>
       </div>
     </div>
   </div>

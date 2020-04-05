@@ -2,7 +2,7 @@ input,
 select,
 textarea,
 .input {
- @apply bg-white p-4 rounded text-lg;
+ @apply bg-transparent p-4 rounded text-lg;
  border-width: 0 0 2px;
  border-color: theme('colors.grey.400');
  width: 100%;
