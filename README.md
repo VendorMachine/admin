@@ -25,6 +25,10 @@ Roadmap
         - [x] Create - basic
         - [x] Edit - basic
         - [ ] Delete `#mvp`
+    - [ ] Import 
+      - [ ] WooCommerce
+      - [ ] Magento
+      - [ ] Shopify  
 - [ ] Authentication
     - [ ] Registration
         - [x]  Sign Up Form
@@ -46,6 +50,7 @@ Roadmap
   - [ ]  Mobile `React Native`
     - [ ] ios
     - [ ] Android 
+  
 
 
 ## Build Setup
