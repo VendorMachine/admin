@@ -27,7 +27,11 @@
           </nuxt-link>
           <div v-if="$auth.user.is_vendor">
             <nuxt-link to="/vendor/edit"><li :class="{'dashboard__sidenav-menu-item--active': isActive('vendor-edit')}" class="dashboard__sidenav-menu-item"><i :class="{'dashboard__sidenav-menu-item-icon--active': isActive('vendor-edit')}" class="fa fa-store dashboard__sidenav-menu-item-icon"></i>Shop Details</li></nuxt-link>
-            
+            <nuxt-link to="/products">
+            <li :class="{'dashboard__sidenav-menu-item--active': isActive('products')}" class="dashboard__sidenav-menu-item">
+              <i :class="{'dashboard__sidenav-menu-item-icon--active': isActive('products')}" class="fa fa-box dashboard__sidenav-menu-item-icon"></i>Products
+            </li>
+          </nuxt-link>
           </div>
         </span>
       </ul>

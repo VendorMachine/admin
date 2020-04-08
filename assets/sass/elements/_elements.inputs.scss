@@ -1,10 +1,9 @@
 input,
 select,
-textarea,
 .input {
  @apply bg-transparent p-4 rounded text-lg;
- border-width: 0 0 2px;
- border-color: theme('colors.grey.400');
+ border-width: 0 0 1px;
+ border-color: theme('colors.grey.300');
  width: 100%;
  outline: none;
  transition: border-color 100ms ease;
@@ -20,7 +19,13 @@ textarea,
  &--slim {
    @apply px-4 py-2 text-base;
  }
+
+ &--bordered {
+   @apply border;
+   border-color:  theme('colors.grey.300');
+ }
 }
+
 
 select {
  height: 60px;
