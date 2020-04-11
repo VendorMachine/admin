@@ -48,6 +48,13 @@ Roadmap
       - [ ] Sales Stats `#mvp`
 - [ ] Products
   - [ ] Flesh out what a product is `#mvp`
+  - [ ] Create Page 
+    - [x] Basic `#mvp`
+    - [ ] Rich Text `#mvp`
+    - [ ] Tags `#mvp`
+    - [ ] Category `#mvp`
+    - [ ] Attributes `#mvp`
+    - [ ] Images `#mvp`
 - [ ] Store Front
   - [ ]  Web `#mvp`
   - [ ]  Mobile `React Native`
