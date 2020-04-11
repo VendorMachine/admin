@@ -1,5 +1,9 @@
 export default {
 
+  async init({ dispatch }) {
+    await dispatch('get');
+  },
+
   get({ commit }, payload) {    
     return this.$api.auth.me()
       .then(response => {               
@@ -15,5 +19,14 @@ export default {
       .then(response => {      
         commit('setUserVendor', response)
       })
+    },
+
+  async storeProduct({commit, state}, payload) {
+    return await this.$api.vendors.products.store(state.account.id, payload)
+      .then(response => {
+        commit('addProduct', response);
+        return response;
+      })
     }
+  
 }

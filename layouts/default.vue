@@ -64,13 +64,12 @@
     },
 
     created() {
-      if (this.$auth.loggedIn && ! this.activeVendor && this.user.vendors.data[0]) {        
-        this.setActiveVendor(this.user.vendors.data[0].id)
+      if (this.$auth.loggedIn) {        
+        this.initVendor()
       }
     },
 
     computed: {
-      ...mapGetters({activeVendor: 'vendors/activeVendor'}),
       user() {
         if (this.$auth.loggedIn) {
           return this.$auth.user;
@@ -79,7 +78,7 @@
     },
 
     methods: {
-      ...mapActions({setActiveVendor: 'vendors/setActive'}),
+      ...mapActions({initVendor: 'vendor/init'}),
       
       hideUserMenu() {
         this.showUserMenu = false;

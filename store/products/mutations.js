@@ -11,6 +11,10 @@ export default {
         Vue.set(state.list[index],'products', products);
     },
 
+    addProduct(state, product) {
+        state.list.push(product);
+    },
+
     setActive(state, vendorId) {
         state.active = vendorId;
     }

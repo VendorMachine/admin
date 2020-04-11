@@ -27,6 +27,7 @@ export default {
   async storeProduct({commit, state}, payload) {
     return await this.$api.vendors.products.store(state.active, payload)
       .then(response => {
+        commit('addProduct', response.data);
         return response;
       })
   },
