@@ -27,6 +27,15 @@ export default {
         commit('addProduct', response);
         return response;
       })
-    }
+  },
+  
+  listProducts({ commit }, query) {
+    return this.$api.products.index(query)
+      .then(response => {
+        commit('setProducts', response.data);
+        commit('setProductsMeta', response.meta);
+        return response
+      })
+  }
   
 }
