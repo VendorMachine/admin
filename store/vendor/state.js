@@ -2,5 +2,8 @@ export default () => ({
     account: {
         name: ""
     },
-    products: [],
+    products: {
+        list: [],
+        meta: {}
+    },
 })
