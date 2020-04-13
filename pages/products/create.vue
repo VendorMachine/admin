@@ -41,7 +41,7 @@ export default {
     submit() {
       return this.store(this.product)
       .then(response => {
-        this.$router.replace(`/products/${response.id}`)
+        this.$router.replace(`/products/${response.id}/edit`)
         this.$toast.success('Product Added')
       })
     }
