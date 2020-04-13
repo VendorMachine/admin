@@ -28,6 +28,22 @@ export default {
         return response;
       })
   },
+
+  async getProduct({commit, state}, productId) {
+    return await this.$api.vendors.products.show(productId)
+      .then(response => {
+        commit('addProduct', response);
+        return response;
+      })
+  },
+
+  async updateProduct({ commit, state }, payload) {
+    return await this.$api.vendors.products.update(payload)
+      .then(response => {
+        commit('addProduct', response)
+        return response;
+      })
+  },
   
   listProducts({ commit }, query) {
     return this.$api.products.index(query)
