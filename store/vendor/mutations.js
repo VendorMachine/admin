@@ -15,6 +15,11 @@ export default {
     },
 
     addProduct(state, product) {
-        state.products.push(product);
+        const productId = _.findIndex(state.products.list, { id: product.id })
+        if (productId > -1) {
+            Vue.set(state.products.list, productId, product)
+        } else {
+            state.products.list.push(product);
+        }
     },
 }

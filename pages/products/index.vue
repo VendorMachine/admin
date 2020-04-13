@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page xl:w-3/5">
     <h1>Products</h1>
     <div class="flex">  
         <input @input="search()" v-model="searchTerm" class="input__search w-1/3" placeholder="Search">

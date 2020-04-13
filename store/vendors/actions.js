@@ -36,6 +36,14 @@ export default {
       })
   },
 
+  async updateProduct({ commit, state }, payload) {
+    return await this.$api.vendors.products.update(state.active, payload)
+      .then(response => {
+        commit('addProduct', response)
+        return response;
+      })
+  },
+
   async store({ commit }, payload) {
     return await this.$api.vendors.store(payload)
       .then(response => {
