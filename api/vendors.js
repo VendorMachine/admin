@@ -25,7 +25,7 @@ export default $axios => ({
         },
 
         store(id, payload) {
-            return $axios.$post(`/vendors/${id}/products`, payload);
+            return $axios.$post(`/products`, payload);
         },
 
         update(payload) {

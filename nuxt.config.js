@@ -51,6 +51,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/toast',
     'nuxt-svg-loader',
+    ['vue-currency-input/nuxt', { globalOptions: { currency: 'GBP' }}],
   ],
 
   /*

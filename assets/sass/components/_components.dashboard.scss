@@ -35,7 +35,7 @@
         background-color: theme('colors.grey.200');
 
         i {
-            color: theme('colors.bluegem') !important;
+            color: theme('colors.purple') !important;
         }
     }
 
@@ -44,7 +44,7 @@
     }
 
     &__sidenav-menu-item-icon--active {
-        @apply text-black mr-2 text-bluegem-500
+        @apply text-black mr-2 text-purple-500
     }
 
     &__main {

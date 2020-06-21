@@ -4,13 +4,19 @@
     <section class="card__header">
       <h1>New Product</h1>
     </section>
-    <section class="flex">
-      <main class="p-5">
+    <section class="flex justify-between">
+      <main class="p-5 ">
         <input  v-model="product.name" placeholder="Product Name" type="input">
         <textarea v-model="product.description" class="input--bordered" placeholder="Description"></textarea>
       </main>
       <aside class="p-5 bg-grey-200 relative">
-        <input v-model="product.price" type="number" placeholder="price">
+        <currency-input
+              v-model="product.price"
+              currency="GBP"
+              locale="en"
+              :value-as-integer="true"
+              :distraction-free="false"
+            />
         <button class="btn btn--primary absolute right-0 bottom-0 mb-4 mr-4">Create Product</button>
       </aside>
     </section>
@@ -28,7 +34,7 @@ export default {
       product: {
         name: "",
         description: "",
-        price: null
+        price: 0
       }
     }
   },
@@ -39,6 +45,8 @@ export default {
     }),
 
     submit() {
+      this.product.price = parseInt(this.product.price);
+      this.product.vendor_id = this.$store.state.vendor.account.id
       return this.store(this.product)
       .then(response => {
         this.$router.replace(`/products/${response.id}/edit`)

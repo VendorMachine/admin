@@ -20,7 +20,7 @@
             <tbody>
               <tr v-for="product in products">
                 <td class="p-2 font-black"><nuxt-link :to="`/products/${product.id}/edit`">{{product.name}}</nuxt-link></td>
-                <td>{{product.price}}</td>
+                <td>{{product.formatted_price}}</td>
               </tr>
             </tbody>
           </table>

@@ -65,6 +65,9 @@ module.exports = {
       },
       bluegem: {
         500: '#43379e'
+      },
+      purple: {
+        500: '#633fa6'
       }
     },
     spacing: {

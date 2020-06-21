@@ -11,7 +11,7 @@
   </header>
   <aside class="dashboard__sidenav border-r border-grey-200">
     <div class="dashboard__sidenav-logo">
-      <i class="fa fa-store text-bluegem-500"></i> <span class="font-bold text-bluegem-500">vendor</span><span class="font-normal">machine</span>
+      <i class="fa fa-store text-purple-500"></i> <span class="font-bold text-purple-500">vendor</span><span class="font-normal">machine</span>
     </div>
     <div class="dashboard__sidenav-content">
       <ul>
