@@ -26,6 +26,12 @@
         </section>
         <section class="p-5" v-else>Loading...</section>
       </form>
+      <section v-if="product && freshProduct">
+        <button @click="addVariant" class="btn"><i class="fa fa-plus ml-auto"></i> Add Variant</button>
+        <div v-for="variant in product.variants.data.slice(1)">
+          {{variant}}
+        </div>
+      </section>
     </section>
   </div>
 </template>
@@ -51,8 +57,9 @@ export default {
       this.product.variants.data.forEach(variant => {
         clonedVariants.push({...variant})
       })
-      this.product.variants = {}
-      this.product.variants.data = clonedVariants;
+      this.product.variants = { data : {}}
+      this.$set(this.product.variants, 'data', clonedVariants)
+      // this.product.variants.data = clonedVariants;
       this.freshProduct = true
     })
   },
@@ -68,6 +75,12 @@ export default {
       getProduct: "vendor/getProduct",
       updateProduct: 'vendor/updateProduct'
     }),
+
+    addVariant(){
+      this.product.variants.data.push({
+        "name": this.product.name
+      })
+    },
 
     save() {
       if (this.busy) { return false }
